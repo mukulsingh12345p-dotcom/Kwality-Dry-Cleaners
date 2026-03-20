@@ -8,13 +8,13 @@
   "theme_color": "#BE1E2D",
   "icons": [
     {
-      "src": "https://picsum.photos/seed/kwality/192/192",
+      "src": "https://images.unsplash.com/photo-1545173168-9f1947eebb7f?q=80&w=192&h=192&auto=format&fit=crop",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "https://picsum.photos/seed/kwality/512/512",
+      "src": "https://images.unsplash.com/photo-1545173168-9f1947eebb7f?q=80&w=512&h=512&auto=format&fit=crop",
       "sizes": "512x512",
       "type": "image/png"
     }

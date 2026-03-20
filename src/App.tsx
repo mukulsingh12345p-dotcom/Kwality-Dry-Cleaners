@@ -10,7 +10,6 @@ import { RegistrationScreen } from './components/RegistrationScreen';
 import { LoginScreen } from './components/LoginScreen';
 import { NotificationsScreen } from './components/NotificationsScreen';
 import { AdminDashboard } from './components/AdminDashboard';
-import { SplashScreen } from './components/SplashScreen';
 import { UserProfile, UserStats, CartItem, Order, ServiceItem, AppNotification } from './types';
 import { SERVICES as INITIAL_SERVICES } from './constants';
 import { NotificationService } from './services/notificationService';
@@ -84,7 +83,6 @@ export default function App() {
     return saved ? JSON.parse(saved) : [];
   });
   const [orders, setOrders] = useState<Order[]>([]);
-  const [showSplash, setShowSplash] = useState(true);
 
   // Firestore Subscriptions
   useEffect(() => {
@@ -129,13 +127,6 @@ export default function App() {
       unsubNotifs();
       unsubServices();
     };
-  }, []);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowSplash(false);
-    }, 3500); // 3.5 seconds splash
-    return () => clearTimeout(timer);
   }, []);
 
   // Persist state to localStorage
@@ -474,21 +465,15 @@ export default function App() {
   };
 
   return (
-    <AnimatePresence mode="wait">
-      {showSplash ? (
-        <SplashScreen key="splash" />
-      ) : (
-        <motion.div 
-          key="app"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          className="min-h-screen"
-        >
-          {renderMainContent()}
-        </motion.div>
-      )}
-    </AnimatePresence>
+    <motion.div 
+      key="app"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      className="min-h-screen"
+    >
+      {renderMainContent()}
+    </motion.div>
   );
 }
 

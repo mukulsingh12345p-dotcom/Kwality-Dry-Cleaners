@@ -17,8 +17,8 @@ export const NotificationService = {
 
     const options = {
       body,
-      icon: 'https://picsum.photos/seed/kwality/192/192',
-      badge: 'https://picsum.photos/seed/kwality/192/192',
+      icon: 'https://images.unsplash.com/photo-1545173168-9f1947eebb7f?q=80&w=192&h=192&auto=format&fit=crop',
+      badge: 'https://images.unsplash.com/photo-1545173168-9f1947eebb7f?q=80&w=192&h=192&auto=format&fit=crop',
       vibrate: [100, 50, 100],
     };
 
