@@ -78,6 +78,12 @@ export const RegistrationScreen: React.FC<RegistrationScreenProps> = ({ onComple
     <div className="min-h-screen bg-bg-base flex flex-col items-center justify-center p-6">
       <div className="w-full max-w-md">
         <div className="text-center mb-10">
+          <div className="flex flex-col items-center justify-center font-black tracking-tighter leading-none text-4xl mb-2">
+            <span className="text-[#BE1E2D] flex items-start">
+              KWALITY<span className="text-[0.4em] leading-none mt-1.5 ml-0.5">®</span>
+            </span>
+            <span className="text-black text-xl tracking-normal mt-1">DRY CLEANERS</span>
+          </div>
           <p className="text-ink-muted text-sm">Create your account to get started</p>
         </div>
 

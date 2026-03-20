@@ -94,6 +94,11 @@ export const EntryScreen = ({ onRegister, onLogin }: { onRegister: () => void, o
             <div className="absolute top-0 left-0 right-0 h-[65vh] bg-gradient-to-b from-[#E5E7EB] via-[#F3F4F6] to-white pointer-events-none" />
             
             <div className="relative z-10 flex flex-col min-h-screen w-full max-w-md px-6 pt-12 pb-10">
+              {/* Logo Top */}
+              <div className="mb-4 shrink-0">
+                <Logo size="small" />
+              </div>
+
               {/* Illustration Area */}
               <div className="flex-1 flex items-center justify-center min-h-[140px] mt-2 mb-8">
                 <ClothesRack />
