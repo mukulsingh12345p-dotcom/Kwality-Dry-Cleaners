@@ -168,24 +168,6 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
         </div>
       </div>
 
-      <div className="bg-red-50 p-5 rounded-2xl border border-red-100 flex items-center justify-between">
-        <div>
-          <h3 className="text-sm font-bold text-red-600">Reset Application Data</h3>
-          <p className="text-xs text-red-400">Clear all orders, users, and carts to start fresh.</p>
-        </div>
-        <button 
-          onClick={() => {
-            if (window.confirm('Are you sure you want to clear ALL data? This will reset the app.')) {
-              localStorage.clear();
-              window.location.reload();
-            }
-          }}
-          className="px-4 py-2 bg-red-600 text-white rounded-xl text-xs font-bold hover:bg-red-700 transition-colors"
-        >
-          Reset All
-        </button>
-      </div>
-
       <div className="bg-surface p-5 rounded-2xl border border-line shadow-sm">
         <h3 className="text-lg font-medium text-ink mb-4">Recent Orders</h3>
         <div className="space-y-4">
