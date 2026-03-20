@@ -71,21 +71,7 @@ const ClothesRack = () => {
   );
 };
 
-let hasSeenSplash = false;
-
 export const EntryScreen = ({ onRegister, onLogin }: { onRegister: () => void, onLogin: () => void }) => {
-  const [step, setStep] = useState<'splash' | 'welcome'>(hasSeenSplash ? 'welcome' : 'splash');
-
-  useEffect(() => {
-    if (step === 'splash') {
-      const timer = setTimeout(() => {
-        hasSeenSplash = true;
-        setStep('welcome');
-      }, 1000); // 1 second splash screen
-      return () => clearTimeout(timer);
-    }
-  }, [step]);
-
   const Logo = ({ size = 'large' }: { size?: 'small' | 'large' }) => (
     <div className={`flex flex-col items-center justify-center font-black tracking-tighter leading-none ${size === 'large' ? 'text-5xl' : 'text-3xl'}`}>
       <span className="text-[#BE1E2D] flex items-start">
@@ -98,18 +84,6 @@ export const EntryScreen = ({ onRegister, onLogin }: { onRegister: () => void, o
   return (
     <div className="relative w-full min-h-screen overflow-y-auto bg-[#F3F4F6] flex justify-center">
       <AnimatePresence>
-        {step === 'splash' && (
-          <motion.div
-            key="splash"
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
-            className="fixed inset-0 flex items-center justify-center bg-[#F3F4F6] z-50"
-          >
-            <Logo size="large" />
-          </motion.div>
-        )}
-
-        {step === 'welcome' && (
           <motion.div
             key="welcome"
             initial={{ opacity: 0 }}
@@ -159,7 +133,6 @@ export const EntryScreen = ({ onRegister, onLogin }: { onRegister: () => void, o
               </div>
             </div>
           </motion.div>
-        )}
       </AnimatePresence>
     </div>
   );
