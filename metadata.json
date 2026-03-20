@@ -1,0 +1,7 @@
+{
+  "name": "Kwality Dry Cleaners",
+  "description": "Premium Dry Clean & Laundry Service App with real-time tracking and easy booking.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
